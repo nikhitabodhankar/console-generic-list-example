@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace console_generic_list_example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> obj = new List<string>();
+
+            //Adding the data into the list
+            // obj.Add("Damini");
+            //obj.Add("Nikhita");
+            //obj.Add("Desham");
+            //obj.Add("shivam");
+
+            Input: Console.WriteLine("Enter name");
+            String name = Console.ReadLine();
+            obj.Add(name);
+            
+
+            Console.WriteLine("Want to continue (Y/N)");
+            string ans = Console.ReadLine();
+            if (ans == "Y" || ans == "y")
+                goto Input;
+            else
+            {
+                foreach(string item in obj)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            Console.ReadLine();
+
+
+        }
+    }
+}
